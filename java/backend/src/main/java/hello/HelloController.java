@@ -28,6 +28,7 @@ public class HelloController {
 
 		}
 
+		// Injected by maven reading the version from pom.xml
 		String appVersion = Application.class.getPackage().getImplementationVersion();
 
 		return String.format(template, appVersion, name);
