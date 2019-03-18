@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: myfrontend
+spec:
+  selector:
+    app: myfrontend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
