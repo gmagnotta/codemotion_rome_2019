@@ -125,11 +125,25 @@ Push Helm chart to chartmuseum
 Depends on your environment
 
 
+Update Helm repo
+----------------
+
+```
+helm repo update
+```
+
+Show available Helm charts to install
+-------------------------------------
+
+```
+helm search
+```
+
 Install Helm chart
 ------------------
 
 ```
-helm install chartmuseum/backend
+helm install chartmuseum/backend [--version 1.0.0]
 ```
 
 Build frontend Helm chart
@@ -167,9 +181,23 @@ Push Helm chart to chartmuseum
 Depends on your environment
 
 
-Install Helm chart
+Upgrade Helm chart
 ------------------
 
 ```
-helm upgrade <releasename> chartmuseum/backend
+helm upgrade <releasename> chartmuseum/backend [--version 1.0.1]
+```
+
+Show history of installed chart
+-------------------------------
+
+```
+helm history <releasename>
+```
+
+Rollback a chart to a previous version
+--------------------------------------
+
+```
+helm rollback <releasename> 1
 ```
